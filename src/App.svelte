@@ -1,30 +1,66 @@
 <script>
-	export let name;
+	import Header from '/routes/Header.svelte';
+	import '/routes/global.css';
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="app">
+	<Header />
+
+	<main>
+		<slot />
+	</main>
+
+	<footer>
+		<p>  2022 Rimumu.gg
+			<i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/Develothy/rimumu.gg" target="_blank">Develothy</a>
+		</p>
+	</footer>
+</div>
 
 <style>
+	@import '@fontsource/fira-mono';
+	@import 'bootstrap/dist/css/bootstrap.css';
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+	@font-face {
+		font-family: 'Pretendard-Regular';
+		src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		width: 100%;
+		max-width: 64rem;
 		margin: 0 auto;
+		box-sizing: border-box;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
+	footer a {
+		font-weight: bold;
+	}
+
+	@media (min-width: 480px) {
+		footer {
+			padding: 12px 0;
 		}
 	}
 </style>

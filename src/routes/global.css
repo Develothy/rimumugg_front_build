@@ -1,0 +1,99 @@
+@import '@fontsource/fira-mono';
+@import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+$primary: #b8daff;
+$danger: #f5c6cb;
+
+
+
+html {
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+}
+body {
+	color: #353535;
+	font-family: 'Archivo Black', sans-serif;
+	background-color: #353535;
+	min-height: 100%;
+}
+p {
+	font-family : 'Pretendard-Light';
+}
+
+ol,ul,li {
+	list-style: none;
+}
+
+a {
+	text-decoration : none;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
+.content{
+	margin-bottom:100px;
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+#myChart{
+	display:block;
+	height : 35%;
+	max-height : 130px;
+	width: 35%;
+}
+
+
+.table-primary {
+	border: 1px solid #81beff;
+}
+
+.table-danger {
+	border: 1px solid #f78d8d;
+}
+
+.table-primary .WIN{
+	background-color : #81beff;
+	writing-mode: vertical-rl;
+	color: #b8daff;
+}
+.table-danger .LOSE{
+	background-color : #f78d8d;
+	writing-mode: vertical-rl;
+	color: #f5c6cb;
+}
+
+.summoner{
+	color: floralwhite;
+}
+
+.summoner-data4{
+	height: 140px;
+	margin: auto 0;
+	margin: 10px;
+	align-items: center;
+	text-align: center;
+	border-radius: 4px;
+	color: floralwhite;
+	background-color: rgba(23, 23, 23, 0.75); /* 배경 색상을 연하게 조절 */
+}
+
+
+
+
